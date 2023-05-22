@@ -7,6 +7,9 @@ import { HttpClientModule } from '@angular/common/http';
 /**ANGULAR MATERIAL */
 import { AngularMaterialModule } from 'src/app/angular-material/angular-material.module';
 
+/**SERVICE */
+import { GuiasService } from '../service/guias.service';
+
 /**COMPONENTS */
 import { AddGuiaComponent } from './add-guia/add-guia.component';
 import { ListGuiaComponent } from './list-guia/list-guia.component';
@@ -16,6 +19,10 @@ import { ListGuiaComponent } from './list-guia/list-guia.component';
     /**COMPONENTS */
     AddGuiaComponent,
     ListGuiaComponent,
+  ],
+  providers: [
+    /**SERVICE */
+    GuiasService,
   ],
   imports: [
     CommonModule,

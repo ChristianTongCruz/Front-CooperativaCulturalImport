@@ -4,6 +4,9 @@ import { CommonModule } from '@angular/common';
 /**ROUTING */
 import { GuiasRoutingModule } from './guias.routes';
 
+/**HTTP CLIENT */
+import { HttpClientModule } from '@angular/common/http';
+
 /**MODULO COMPONENTS */
 import { GuiasComponentsModule } from './components/guias-components.module';
 
@@ -19,6 +22,7 @@ import { GuiasPagesComponent } from './pages/guias-pages/guias-pages.component';
   ],
   imports: [
     CommonModule,
+    HttpClientModule,
     /**ROUTING */
     GuiasRoutingModule,
     /**MODULO COMPONENTS */

@@ -1,1 +1,64 @@
-<p>list-guia works!</p>
+<ng-container>
+  <div class="d-flex justify-content-between">
+    <button mat-fab color="primary" (click)="openDialog()">
+      <mat-icon
+        class="rounded-circle"
+        style="color: white"
+        aria-hidden="false"
+        aria-label="Add Guia"
+        fontIcon="add"
+      ></mat-icon>
+    </button>
+
+    <mat-form-field>
+      <mat-label>Filter</mat-label>
+      <input
+        matInput
+        (keyup)="applyFilter($event)"
+        placeholder="Ex. Mia"
+        #input
+      />
+    </mat-form-field>
+  </div>
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" matSort>
+      <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Id.</th>
+        <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="fecha_emision">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Fecha Emision</th>
+        <td mat-cell *matCellDef="let element">{{ element.fecha_emision }}</td>
+      </ng-container>
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="punto_partida_direccion">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Punto Partida</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.punto_partida_direccion }}
+        </td>
+      </ng-container>
+
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="punto_llegada_direccion">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Punto Llegada</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element.punto_llegada_direccion }}
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+    <mat-paginator
+      [pageSizeOptions]="[5, 10, 25, 100]"
+      aria-label="Seleccionar página de Guia"
+    ></mat-paginator>
+  </div>
+</ng-container>

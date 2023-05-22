@@ -1,7 +1,7 @@
 export interface GuiaListReq {
   id: number;
   operacion: string;
-  fecha_emision: Date;
+  fecha_emision: Date | string;
   peso_bruto_total: string;
   peso_bruto_unidad_medida: string;
   punto_partida_direccion: string;
