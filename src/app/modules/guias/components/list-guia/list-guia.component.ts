@@ -11,7 +11,6 @@ import { MatTableDataSource } from '@angular/material/table';
 
 /**COMPONENTS */
 import { AddGuiaComponent } from '../add-guia/add-guia.component';
-import { GuiaListReq } from '../../model';
 
 @Component({
   selector: 'app-list-guia',

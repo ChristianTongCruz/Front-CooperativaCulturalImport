@@ -12,6 +12,7 @@ import { AngularMaterialModule } from 'src/app/angular-material/angular-material
 
 /**SERVICE */
 import { GuiasService } from '../service/guias.service';
+import { DniRucService } from 'src/app/shared/service/DniRuc.service';
 
 /**COMPONENTS */
 import { AddGuiaComponent } from './add-guia/add-guia.component';
@@ -26,13 +27,13 @@ import { ListGuiaComponent } from './list-guia/list-guia.component';
   providers: [
     /**SERVICE */
     GuiasService,
+    DniRucService,
   ],
   imports: [
     CommonModule,
     /**HTTP CLIENT */
     HttpClientModule,
     /**FORMS */
-    FormControl,
     ReactiveFormsModule,
     /**ANGULAR MATERIAL */
     AngularMaterialModule,

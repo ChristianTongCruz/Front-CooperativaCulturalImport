@@ -6,7 +6,7 @@ import { GuiasLayoutComponent } from './layout/guias-layout/guias-layout.compone
 
 const routes: Routes = [
   {
-    path: 'info',
+    path: '',
     component: GuiasLayoutComponent,
   },
 ];
