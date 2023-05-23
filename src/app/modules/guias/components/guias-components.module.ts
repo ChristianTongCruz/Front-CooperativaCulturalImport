@@ -4,6 +4,9 @@ import { CommonModule } from '@angular/common';
 /**HTTP CLIENT */
 import { HttpClientModule } from '@angular/common/http';
 
+/**FORMS */
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
+
 /**ANGULAR MATERIAL */
 import { AngularMaterialModule } from 'src/app/angular-material/angular-material.module';
 
@@ -28,6 +31,9 @@ import { ListGuiaComponent } from './list-guia/list-guia.component';
     CommonModule,
     /**HTTP CLIENT */
     HttpClientModule,
+    /**FORMS */
+    FormControl,
+    ReactiveFormsModule,
     /**ANGULAR MATERIAL */
     AngularMaterialModule,
   ],
