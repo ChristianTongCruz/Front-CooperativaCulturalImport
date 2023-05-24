@@ -28,25 +28,48 @@ export class AddGuiaComponent implements OnInit {
 
   /**INICIALICE */
 
+  DNI: any;
+
   /**LIFE COMPONENT */
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  ConsultarDni(dni: any) {
     return this._DniRucService
-      .getDni(70102288)
-      .subscribe((response) => console.log(response));
+      .getDni(dni)
+      .subscribe((response) => (response = this.DNI));
   }
 
-  FormDatosTransportistas = this._FormBuilder.group({
+  NombreDni(){
+
+  }
+
+  FormDatosVehiculo = this._FormBuilder.group({
+    placa: [''],
+    marca: [''],
+    modelo: [''],
+    year: [''],
+    color: [''],
+    tipo: [''],
+  });
+
+  FormDatosTransportista = this._FormBuilder.group({
+    numero_documento: [''],
+    nombre: ['', Validators.required],
+    tipo_documento: [''],
+  });
+
+  FormDatosDestinatario = this._FormBuilder.group({
     numero_documento: [''],
     nombre: ['', Validators.required],
     tipo_documento: [''],
   });
 
   get numero_documento() {
-    return this.FormDatosTransportistas.get('numero_documento') as FormControl;
+    return this.FormDatosTransportista.get('numero_documento') as FormControl;
   }
 
   proces() {
-    console.log(this.FormDatosTransportistas.value);
+    console.log('this.FormDatosTransportista.value');
   }
 }

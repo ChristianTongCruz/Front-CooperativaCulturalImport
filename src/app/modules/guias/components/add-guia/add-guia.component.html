@@ -135,22 +135,25 @@
             <div class="card-header">
               <h2 class="card-title mb-0">Datos Transportista</h2>
             </div>
-            <form [formGroup]="FormDatosTransportistas">
+            <form [formGroup]="FormDatosTransportista">
               <div class="card-body d-flex flex-column gap-3">
                 <select class="form-select">
                   <option selected disabled>Tipo Documento</option>
                   <option>DNI</option>
                   <option>RUC</option>
                 </select>
-
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="Número Documento"
-                  formControlName="numero_documento"
-                />
-
-                {{ FormDatosTransportistas.get("numero_documento")?.value }}
+                <label class="d-flex">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Número Documento"
+                    formControlName="numero_documento"
+                  />
+                  <button (click)="proces()">
+                    <mat-icon>person_search</mat-icon>
+                  </button>
+                </label>
+                {{ FormDatosTransportista.get("numero_documento")?.value }}
                 <input
                   type="text"
                   class="form-control"
