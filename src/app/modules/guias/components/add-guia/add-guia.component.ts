@@ -29,7 +29,7 @@ export class AddGuiaComponent implements OnInit {
   /**INICIALICE */
 
   DNI: any = {};
-  FullName?: string;
+  FullName?: string = '';
 
   /**LIFE COMPONENT */
 
@@ -66,8 +66,15 @@ export class AddGuiaComponent implements OnInit {
   });
 
   FormDatosTransportista = this._FormBuilder.group({
-    numero_documento: [''],
-    nombre: ['', Validators.required],
+    numero_documento: [
+      '',
+      [
+        Validators.required,
+        Validators.maxLength(8),
+        Validators.pattern(/^[0-9]+$/),
+      ],
+    ],
+    nombre: [`${this.FullName}`],
     tipo_documento: [''],
   });
 
@@ -83,13 +90,16 @@ export class AddGuiaComponent implements OnInit {
     return this.FormDatosTransportista.get('numero_documento') as FormControl;
   }
 
+  get FormDatosTransportista_nombre() {
+    return this.FormDatosTransportista.get('nombre') as FormControl;
+  }
   /**METHODS */
 
   mostrarDNI(dni: any) {
     return this._DniRucService.getDni(dni).subscribe((response) => {
       this.DNI = response;
       this.FullName = `${this.DNI.nombres} ${this.DNI.apellidoPaterno} ${this.DNI.apellidoMaterno}`;
-      console.log(this.DNI);
+      console.log(this.FullName);
     });
   }
 
@@ -99,6 +109,9 @@ export class AddGuiaComponent implements OnInit {
   }
 
   proces() {
-    console.log(this.FormDatosTransportista_numero_documento.value);
+    console.log(
+      this.FormDatosTransportista_numero_documento.value,
+      this.FormDatosTransportista_nombre.value
+    );
   }
 }
