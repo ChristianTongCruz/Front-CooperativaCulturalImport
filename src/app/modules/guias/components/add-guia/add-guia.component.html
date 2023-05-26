@@ -2,9 +2,6 @@
 <mat-dialog-content class="mat-typography">
   <main class="content">
     <div class="container-fluid">
-      <!-- <div class="mb-3 wrapper">
-          <h1 class="h3 d-inline align-middle text-white">GUIA</h1>
-        </div> -->
       <div class="row">
         <form>
           <div class="col-12 col-lg-12">
@@ -13,95 +10,109 @@
               <div class="card-header">
                 <h2 class="card-title mb-0">Guia</h2>
               </div>
-              <div class="card-body d-flex flex-column gap-3">
-                <div class="d-flex flex-row gap-3">
-                  <select class="form-select">
-                    <option selected disabled>Tipo Comprobante</option>
-                    <option>Comprobante 1</option>
-                    <option>Comprobante 2</option>
-                  </select>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-6">
+                    <select class="form-select mb-3">
+                      <option selected disabled>Tipo Comprobante</option>
+                      <option>Comprobante 1</option>
+                      <option>Comprobante 2</option>
+                    </select>
 
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Peso Bruto Total"
-                  />
-                  <select class="form-select">
-                    <option selected disabled>Unidad Medida</option>
-                    <option>Unidad Medida 1</option>
-                    <option>Unidad Medida 2</option>
-                  </select>
+                    <input
+                      type="text"
+                      class="form-control mb-3"
+                      placeholder="Peso Bruto Total"
+                    />
 
-                  <select class="form-select">
-                    <option selected disabled>Destino Cliente</option>
-                    <option>Destino Cliente 1</option>
-                    <option>Destino Cliente 2</option>
-                  </select>
+                    <select class="form-select mb-3">
+                      <option selected disabled>Unidad Medida</option>
+                      <option>Unidad Medida 1</option>
+                      <option>Unidad Medida 2</option>
+                    </select>
 
-                  <select class="form-select">
-                    <option selected disabled>
-                      Placa Vehículo Transportista
-                    </option>
-                    <option>Destino Cliente 1</option>
-                    <option>Destino Cliente 2</option>
-                  </select>
+                    <select class="form-select mb-3">
+                      <option selected disabled>Destino Cliente</option>
+                      <option>Destino Cliente 1</option>
+                      <option>Destino Cliente 2</option>
+                    </select>
+
+                    <select class="form-select mb-3">
+                      <option selected disabled>
+                        Placa Vehículo Transportista
+                      </option>
+                      <option>Placa Vehículo 1</option>
+                      <option>Placa Vehículo 2</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6">
+                    <select class="form-select mb-3">
+                      <option selected disabled>Punto Partida (Ubigeo)</option>
+                      <option>Punto Partida (Ubigeo) 1</option>
+                      <option>Punto Partida (Ubigeo) 2</option>
+                    </select>
+
+                    <input
+                      type="text"
+                      class="form-control mb-3"
+                      placeholder="Punto de Partida (Dirección)"
+                    />
+
+                    <input
+                      type="text"
+                      class="form-control mb-3"
+                      placeholder="Establecimiento Sunat"
+                    />
+
+                    <select class="form-select mb-3">
+                      <option selected disabled>Punto Llegada (Ubigeo)</option>
+                      <option>Punto Llegada (Ubigeo) 1</option>
+                      <option>Punto Llegada (Ubigeo) 2</option>
+                    </select>
+
+                    <input
+                      type="text"
+                      class="form-control mb-3"
+                      placeholder="Punto de Llegada (Dirección)"
+                    />
+
+                    <input
+                      type="text"
+                      class="form-control mb-3"
+                      placeholder="Establecimiento Sunat"
+                    />
+                  </div>
                 </div>
-                <div class="d-flex flex-row gap-3">
-                  <select class="form-select">
-                    <option selected disabled>Punto Partida (Ubigeo)</option>
-                    <option>Punto Partida (Ubigeo) 1</option>
-                    <option>Punto Partida (Ubigeo) 2</option>
-                  </select>
-
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Punto de Partida (Dirección)"
-                  />
-
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Establecimiento Sunat"
-                  />
-
-                  <select class="form-select">
-                    <option selected disabled>Punto Llegada (Ubigeo)</option>
-                    <option>Punto Llegada (Ubigeo) 1</option>
-                    <option>Punto Llegada (Ubigeo) 2</option>
-                  </select>
-
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Punto de Llegada (Dirección)"
-                  />
-
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Establecimiento Sunat"
-                  />
+                <div class="row">
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      class="form-control mb-3"
+                      placeholder="Observaciones"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      class="form-control mb-3"
+                      placeholder="Formato"
+                    />
+                  </div>
                 </div>
-                <div class="d-flex flex-row gap-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Observaciones"
-                  />
-
-                  <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Formato"
-                  />
+                <div class="row">
+                  <div class="col-md-12">
+                    <label class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                      />
+                      <span class="form-check-label">
+                        Enviar Automáticamente Cliente
+                      </span>
+                    </label>
+                  </div>
                 </div>
-                <label class="form-check">
-                  <input class="form-check-input" type="checkbox" value="" />
-                  <span class="form-check-label">
-                    Enviar Automáticamente Cliente
-                  </span>
-                </label>
               </div>
             </div>
           </div>
@@ -109,26 +120,69 @@
       </div>
       <div class="row">
         <div class="col-12 col-lg-6">
-          <!--VEHICULO-->
+          <!--DATOS VEHICULO-->
           <form>
             <div class="card">
               <div class="card-header">
                 <h2 class="card-title mb-0">Datos Vehiculo</h2>
               </div>
-              <div class="card-body d-flex flex-row gap-3">
-                <select class="form-select">
-                  <option selected disabled>Tipo Vehiculo</option>
-                  <option>Vehiculo 1</option>
-                  <option>Vehiculo 2</option>
-                </select>
-                <input type="text" class="form-control" placeholder="Placa" />
-                <input type="text" class="form-control" placeholder="Marca" />
-                <input type="text" class="form-control" placeholder="Modelo" />
-                <input type="text" class="form-control" placeholder="Año" />
-                <input type="text" class="form-control" placeholder="Color" />
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <select class="form-select mb-3">
+                          <option selected disabled>Tipo Vehiculo</option>
+                          <option>Vehiculo 1</option>
+                          <option>Vehiculo 2</option>
+                        </select>
+                      </div>
+                      <div class="col-md-6">
+                        <input
+                          type="text"
+                          class="form-control mb-3"
+                          placeholder="Placa"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <input
+                          type="text"
+                          class="form-control mb-3"
+                          placeholder="Marca"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <input
+                          type="text"
+                          class="form-control mb-3"
+                          placeholder="Modelo"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <input
+                          type="text"
+                          class="form-control mb-3"
+                          placeholder="Año"
+                        />
+                      </div>
+                      <div class="col-md-6">
+                        <input
+                          type="text"
+                          class="form-control mb-3"
+                          placeholder="Color"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </form>
+
           <!--DATOS TRANSPORTISTA-->
 
           <div class="card">
@@ -149,17 +203,28 @@
                     placeholder="Número Documento"
                     formControlName="numero_documento"
                   />
-                  <button (click)="proces()">
+                  <button (click)="consultarDNI()">
                     <mat-icon>person_search</mat-icon>
                   </button>
                 </label>
-                {{ FormDatosTransportista.get("numero_documento")?.value }}
+                <span
+                  [hidden]="
+                    FormDatosTransportista_numero_documento.valid ||
+                    FormDatosTransportista_numero_documento.pristine
+                  "
+                  class="alert alert-danger mt-2"
+                  >Este campo es obligatorio</span
+                >
                 <input
                   type="text"
                   class="form-control"
-                  placeholder="Nombre Completo"
                   disabled
+                  value=" {{ !FullName ? 'Nombre Completo' : FullName }} "
                 />
+
+                <span class="alert alert-danger mt-2"
+                  >El número de documento no existe</span
+                >
               </div>
             </form>
           </div>
